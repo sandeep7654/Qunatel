@@ -24,3 +24,28 @@ def return_day(day,number):
     week=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
     week += week
     return week[week.index(day)+number]
+    
+str="aaaabbccaaddbb"
+
+l1=[]
+l2=[]
+for i in range(len(str)):
+    if str[i] in l1:
+        if str[i] == str[i-1]:
+            l2[-1] +=1
+        else:
+
+            l1.append(str[i])
+            l2.append(1)
+    else:
+
+        l1.append(str[i])
+        l2.insert(l1.index(str[i]),1)
+
+s=list(zip(l1,l2))
+print(s)
+
+
+
+
+
